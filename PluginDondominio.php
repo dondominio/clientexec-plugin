@@ -1163,11 +1163,37 @@ class PluginDonDominio extends RegistrarPlugin implements ICanImportDomains
 				'response' => array
 				(
 					'throwExceptions' => true
+				),
+				'userAgent' => array(
+					'ClientExecRegistrarPlugin' => $this->_getVersion()
 				)
 			)
 		);
 		
 		return $dondominio;
+	}
+	
+	private function _getVersion()
+	{
+		$versionFile = __DIR__ . '/version.json';
+	
+		if( !file_exists( $versionFile )){
+			return 'unknown';
+		}
+		
+		$json = @file_get_contents( $versionFile );
+		
+		if( empty( $json )){
+			return 'unknown';
+		}
+		
+		$versionInfo = json_decode( $json, true );
+		
+		if( !is_array( $versionInfo ) || !array_key_exists( 'version', $versionInfo )){
+			return 'unknown';
+		}
+		
+		return $versionInfo['version'];
 	}
 	
 	/**
