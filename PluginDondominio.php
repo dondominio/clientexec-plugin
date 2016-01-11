@@ -1156,7 +1156,6 @@ class PluginDonDominio extends RegistrarPlugin implements ICanImportDomains
 		$dondominio = new DonDominioAPI(
 			array
 			(
-				'endpoint' => 'https://simple-api-test.dondominio.net',
 				'port' => 443,
 				'apiuser' => $params['API Username'],
 				'apipasswd' => $params['API Key'],
