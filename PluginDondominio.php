@@ -269,6 +269,7 @@ class PluginDonDominio extends RegistrarPlugin implements ICanImportDomains
 			$arguments['domainIntendedUse'] = $ext['core_intendeduse'];
 			break;
 			
+		case 'barcelona':
 		case 'cat':
 		case 'pl':
 		case 'eus':
