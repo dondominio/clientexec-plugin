@@ -277,10 +277,6 @@ class PluginDonDominio extends RegistrarPlugin implements ICanImportDomains
 			$arguments['domainIntendedUse'] = $additionalFields['Intended Use'];
 			break;
 			
-		case 'coop':
-			$arguments['coopCVC'] = $additionalFields['CVC'];
-			break;
-			
 		case 'fr':
 			$arguments['ownerDateOfBirth'] = $userData['Date of Birth'];
 			break;
@@ -484,10 +480,6 @@ class PluginDonDominio extends RegistrarPlugin implements ICanImportDomains
 		case 'eus':
 		case 'gal':
 			$arguments['domainIntendedUse'] = $additionalFields['Intended Use'];
-			break;
-			
-		case 'coop':
-			$arguments['coopCVC'] = $additionalFields['CVC'];
 			break;
 			
 		case 'fr':
